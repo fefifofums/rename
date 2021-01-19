@@ -1,0 +1,12 @@
+#!/bin/bash
+
+IFS=$'\n'
+
+
+
+for i in $(ls *"$1"*);
+do	
+	echo Renaming "$i" with "${i/$2/$3}"
+	mv "$i" "${i/$2/$3}"
+done
+exit 0
